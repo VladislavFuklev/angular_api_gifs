@@ -8,7 +8,7 @@
   </div>
 
   <div>
-    <button (click)="search()" class="search-button">Пошук</button>
+    <button (click)="search()" [disabled]="form.invalid" class="search-button">Пошук</button>
   </div>
 </form>
 

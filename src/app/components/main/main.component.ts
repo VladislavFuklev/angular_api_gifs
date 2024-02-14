@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GiphService } from 'src/app/services/giph.service';
 
 @Component({
@@ -19,7 +19,7 @@ export class MainComponent implements OnInit {
 
   initForm() {
     this.form = this.fb.group({
-      query:['']
+      query:['', [Validators.required]]
     });
   }
 

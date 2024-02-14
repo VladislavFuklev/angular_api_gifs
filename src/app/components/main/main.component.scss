@@ -69,3 +69,7 @@
   object-fit: cover;
   border-radius: 5px;
 }
+.search-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
