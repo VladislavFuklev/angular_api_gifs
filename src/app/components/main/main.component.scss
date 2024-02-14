@@ -35,14 +35,6 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
-.image-item {
-  position: relative;
-  margin: 10px;
-  text-align: center;
-  width: 220px;
-}
-
 .image-title {
   position: absolute;
   top: 5px;
@@ -61,8 +53,19 @@
   padding: 5px;
 }
 
+
+.image-item {
+  position: relative;
+  margin: 10px;
+  text-align: center;
+  width: calc(33.33% - 20px);
+  max-width: 300px;
+  height: 300px; 
+}
+
 .image-item img {
   width: 100%;
-  height: auto;
+  height: 100%; 
+  object-fit: cover;
   border-radius: 5px;
 }
