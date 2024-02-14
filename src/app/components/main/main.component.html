@@ -1,0 +1,21 @@
+<header class="header">
+  <h1>GIF</h1>
+</header>
+
+<form [formGroup]="form" class="form">
+  <div>
+    <input type="text" formControlName="query" class="input-field" />
+  </div>
+
+  <div>
+    <button (click)="search()" class="search-button">Пошук</button>
+  </div>
+</form>
+
+<div class="image-container">
+  <div *ngFor="let image of service.giphData()?.data" class="image-item">
+    <img [src]="image.images.fixed_height.url" alt="{{ image.title }}" />
+    <p class="image-title">{{ image.title }}</p>
+    <p class="image-date">{{ image.import_datetime  | date:'dd.MM.yyyy' }}</p>
+  </div>
+</div>
